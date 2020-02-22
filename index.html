@@ -13,7 +13,7 @@
     <script src="block_stubs.js"></script>
     <script src="customFunctions.js"></script>
     <link rel="stylesheet" href="css.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Blockly Files-->
 
@@ -90,13 +90,7 @@
                             </div>
                         </radiogroup>
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>
-                        
-                    </p>
+
                 </td>
             </tr>
             <tr>
@@ -104,9 +98,10 @@
                     <p>
                         <button class="myButton" onClick="runCode()">Generate Code</button>
                         <button class="myButton" onClick="downloadWorkspace('MyWorkSpace.xml')">Save Code</button>
+                        <button class="myButton" onClick="exportCode()">Export Code</button>
                         <span class="readBytesButtons">
                             <button class="myButton">Load file</button>
-                          </span>
+                        </span>
                         <input type="file" id="files" name="file" />
                         <div id="byte_range"></div>
                         <div id="byte_content"></div>
@@ -152,18 +147,24 @@
                                 }
                             }, false);
                         </script>
-                            <script>
-                                
-                            </script>
+                        <script>
+
+                        </script>
                     </p>
                 </td>
             </tr>
             <tr id="blocklyArea">
                 <td>
-                    <div ></div>
+                    <div></div>
                     Blockly will be positioned here.
                 </td>
             </tr>
+            <tr>
+                <td>
+                <textarea id="codearea" readonly style="height: 200px;width: 500px;">The code will be exported here</textarea>
+                </td>
+            </tr>
+
 
         </tbody>
     </table>

@@ -205,3 +205,13 @@ function downloadWorkspace(filename) {
     var endByte = evt.target.getAttribute('data-endbyte');
     readBlob(startByte, endByte);
   }
+
+function exportCode()
+{
+    sub = 0;
+    additionalContext = "";
+    var code = Blockly.JavaScript.workspaceToCode(workspace);
+    code += "\n"  + additionalContext;
+    var element = document.getElementById("codearea");
+    element.value = code;
+}

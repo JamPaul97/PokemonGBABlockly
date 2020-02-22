@@ -11,7 +11,7 @@ Blockly.JavaScript['sixbyte'] = function(block) {
   var code;
   if(WritingInDecimals)
   code = "0x" + text_value.toString(16);
-  else code = "0x" +  parseInt(text_value,16);
+  else code = "0x" +  text_value;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -21,7 +21,7 @@ Blockly.JavaScript['byte'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   if(WritingInDecimals)
   code = "0x" + text_value.toString(16);
-  else code = "0x" +  parseInt(text_value,16);
+  else code = "0x" +  text_value;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -31,7 +31,7 @@ Blockly.JavaScript['word'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   if(WritingInDecimals)
   code = "0x" + text_value.toString(16);
-  else code = "0x" +  parseInt(text_value,16);
+  else code = "0x" +  text_value;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
@@ -41,7 +41,7 @@ Blockly.JavaScript['dword'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   if(WritingInDecimals)
   code = "0x" + text_value.toString(16);
-  else code = "0x" +  parseInt(text_value,16);
+  else code = "0x" +  text_value;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
